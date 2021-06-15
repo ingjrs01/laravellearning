@@ -115,6 +115,7 @@ class ComposerStaticInitbd5967e1047614619c10c72d8daee746
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MiAplicacion\\' => 13,
         ),
         'L' => 
         array (
@@ -368,6 +369,10 @@ class ComposerStaticInitbd5967e1047614619c10c72d8daee746
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'MiAplicacion\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
@@ -519,6 +524,8 @@ class ComposerStaticInitbd5967e1047614619c10c72d8daee746
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CustomersController' => __DIR__ . '/../..' . '/app/Http/Controllers/CustomersController.php',
+        'App\\Http\\Controllers\\Employees' => __DIR__ . '/../..' . '/app/Http/Controllers/Employees.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\ProductosController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductosController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

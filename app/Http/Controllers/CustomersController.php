@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use App\Http\Request\StoreCustomerRequest;
+use MiAplicacion\Application\Services\Customer\CreateCustomerCommand;
+use MiAplicacion\Application\Infrastructure\Bus\Contracts\CommandBus;
 
 class CustomersController extends Controller
 {
+	private $commandBus;
+
+	public function __construct(CommandBus $commandBus) 
+	{
+		$this->commandBus = $commandBus;
+	}
     /**
      * Display a listing of the resource.
      *
@@ -32,9 +41,15 @@ class CustomersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCustomerRequest $request)
     {
-        //
+	    $command = new CreateCustomerCommand(
+		    $request->input('name'),
+		    $request->input('email')
+	    );
+	    $this->commandBus->execute($command);
+
+	    return response()->json(['result'=>'Cliente Creado']);
     }
 
     /**
@@ -45,7 +60,7 @@ class CustomersController extends Controller
      */
     public function show($id)
     {
-        //
+        return dd("Mostrando el registro");
     }
 
     /**
@@ -56,7 +71,7 @@ class CustomersController extends Controller
      */
     public function edit($id)
     {
-        //
+        return dd("Aqúi deberíamos editar");
     }
 
     /**
