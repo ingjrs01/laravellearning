@@ -12,6 +12,11 @@ class ProductosController extends Controller
     }
 
 	public function get(int $id) {
-		return dd($id);
+		//return dd($id);
+		return view('product', ['id'=>$id, 'name' => 'Producto de Prueba']);
+	}
+
+	public function save() {
+		return dd("Guardando");
 	}
 }

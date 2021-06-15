@@ -1,12 +1,22 @@
-<form action="/guardar" method="POST">
+
+@extends('layouts.app')
+
+@section('content')
+
+<form action="/products/product" method="PUT">
   
   <div class="form-group row">
-    <label for="inputvehiculo" class="col-sm-2 col-form-label">Vehiculo</label>
+    <label for="inputvehiculo" class="col-sm-2 col-form-label">Referencia</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputvehiculo" placeholder="Auto o Camioneta">
+      <input type="text" class="form-control" id="inputvehiculo" value="{{$id}}">
     </div>
   </div>
   
+    <label for="inputvehiculo" class="col-sm-2 col-form-label">Nombre</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputvehiculo" value="{{$name}}" >
+    </div>
+  </div>
 
   <div class="form-group row">
     <div class="col-sm-10">
@@ -25,3 +35,4 @@
     </div>
   </div>
 </form>
+	@endsection
