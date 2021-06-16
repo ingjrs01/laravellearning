@@ -8,7 +8,7 @@ class ProductosController extends Controller
 {
 	// Esto es un comentario
 	public function index(Request $request) {
-		return ("Dentro de Index");
+		return ("Dentro de Index para Productos");
     }
 
 	public function get(int $id) {
