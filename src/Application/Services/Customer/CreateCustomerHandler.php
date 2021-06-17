@@ -13,4 +13,13 @@ final class CreateArticleHandler implements Handler
      {
          $this->repository;
      }
+     
+     public function __invoke($command)
+     {
+        $customer = CustomerEntity(
+            $command->getName(),
+            $command->getEmail()
+        );
+        $this->repository->save($article);
+     }
 }
